@@ -16,7 +16,7 @@ def goLive():
     queue = client.get_queue_by_name(QueueName="livestreamBool")
     response = queue.send_message(MessageBody="goLive")
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
-        return '<h2>We\'re going live!</h2>\n<a href="http://twitch.tv/ConstructionCam">Click Here</a> to watch'
+        return '<h2>We\'re going live!</h2>\n<a href="http://twitch.tv/ConstructionCam">Click Here</a> to watch.'
     else:
         return "SQS not being written."
 
