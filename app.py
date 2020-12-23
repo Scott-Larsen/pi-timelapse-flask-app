@@ -2,6 +2,10 @@ import boto3
 from flask import Flask
 from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
+# Pull API keys from Config Vars on Heroku or local
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_ACCESS_KEY_ID")
+
 app = Flask(__name__)
 
 
